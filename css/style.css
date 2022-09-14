@@ -37,15 +37,15 @@ header {
 header div {
     background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
     border-radius: 50%;
+    margin: auto;
     width: 160px;
-    height: 160px;
+    /* height: 160px; */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 5px;
 }
 
 header img {
-    width: 150px;
+    width: 100%;
     border-radius: 50%;
 }
 
