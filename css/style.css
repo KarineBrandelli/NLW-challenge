@@ -32,6 +32,7 @@ header {
     display: flex;
     justify-content: center;
     margin-top: 35px;
+    height: 170px;
 }
 
 header div {
@@ -39,9 +40,14 @@ header div {
     border-radius: 50%;
     margin: auto;
     width: 160px;
-    /* height: 160px; */
     display: flex;
     padding: 5px;
+
+    transition: transform .3s;
+}
+
+header div:hover {
+    transform: scale(1.1);
 }
 
 header img {
@@ -84,6 +90,14 @@ section ul {
     gap: 16px;
 }
 
+section ul li {
+    transition: transform .3s;
+}
+
+section ul li:hover {
+    transform: scale(1.1);
+}
+
 .games-list img {
     width: 90px;
     border-radius: 8px;
@@ -92,4 +106,49 @@ section ul {
 .channel-list img {
     width: 70px;
     border-radius: 50%;
+}
+
+
+header div {
+    animation: fromTop .7s .2s backwards;
+}
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main section {
+    animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1) {
+    animation-delay: 0;
+}
+
+main section:nth-child(2) {
+    animation-delay: .4s;
+}
+
+main section:nth-child(3) {
+    animation-delay: .8s;
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
